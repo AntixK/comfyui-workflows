@@ -1,0 +1,265 @@
+{
+  "last_node_id": 17,
+  "last_link_id": 14,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": {
+        "0": 36,
+        "1": 267
+      },
+      "size": [
+        664.563027381897,
+        577.7984142303467
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "419572-edit.jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "BRIA_RMBG_ModelLoader_Zho",
+      "pos": {
+        "0": 399,
+        "1": 77
+      },
+      "size": {
+        "0": 302.4000244140625,
+        "1": 26
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BRIA_RMBG_ModelLoader_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "BRIA_RMBG_Zho",
+      "pos": {
+        "0": 743,
+        "1": 66
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "link": 10
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            12
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            13
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BRIA_RMBG_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "MaskToImage",
+      "pos": {
+        "0": 904,
+        "1": 194
+      },
+      "size": {
+        "0": 264.5999755859375,
+        "1": 26
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 17,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 923,
+        "1": 312
+      },
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1194,
+        "1": 57
+      },
+      "size": [
+        656.563027381897,
+        568.7984142303467
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      10,
+      10,
+      0,
+      11,
+      0,
+      "RMBGMODEL"
+    ],
+    [
+      11,
+      12,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      12,
+      11,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      11,
+      1,
+      16,
+      0,
+      "MASK"
+    ],
+    [
+      14,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        54.43697261810303,
+        24.20158576965332
+      ]
+    }
+  },
+  "version": 0.4
+}

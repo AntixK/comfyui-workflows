@@ -1,0 +1,1 @@
+https://huggingface.co/briaai/RMBG-1.4/resolve/main/model.pth
