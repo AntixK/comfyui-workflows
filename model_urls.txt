@@ -1,1 +1,4 @@
 https://huggingface.co/briaai/RMBG-1.4/resolve/main/model.pth
+https://civitai.com/api/download/models/293240?type=Model&format=SafeTensor&size=pruned&fp=fp16
+https://civitai.com/api/download/models/632971?type=Model&format=SafeTensor
+https://civitai.com/api/download/models/603123?type=Model&format=SafeTensor
