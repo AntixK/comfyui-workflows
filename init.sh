@@ -84,4 +84,11 @@ else
     git pull https://github.com/yolain/ComfyUI-Easy-Use.git
 fi
 
+https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+https://github.com/Fannovel16/ComfyUI-Video-Matting.git
+https://github.com/Fannovel16/ComfyUI-Frame-Interpolation.git
+https://github.com/kijai/ComfyUI-KJNodes.git
+https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git
+https://github.com/11cafe/comfyui-workspace-manager.git
+
 # wget https://huggingface.co/briaai/RMBG-1.4/resolve/main/model.pth -O $CUSTOMNODEDIR/ComfyUI-BRIA_AI-RMBG/model.pth
